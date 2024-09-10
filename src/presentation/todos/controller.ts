@@ -13,6 +13,7 @@ export class TodosController {
     ){}
 
     public getTodos = (req: Request, res: Response) => {
+        
         new GetTodos(this.todoRepository)
             .execute()
             .then( todos => res.json(todos))
